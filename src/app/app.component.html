@@ -1,1 +1,11 @@
 <h1>Angular App</h1>
+<p>
+    {{evenOdds.length}}
+</p>
+<p>
+    <app-game-control (onEventStart)='onGameStart($event)'></app-game-control>
+</p>
+<p *ngFor='let counter of evenOdds'>
+    <app-odd *ngIf='counter % 2'></app-odd>
+    <app-even *ngIf='!(counter % 2)'></app-even>
+</p>

@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   name = '';
+  evenOdds = [];
+  onGameStart(num = { counter : 0 }) {
+    this.evenOdds.push(num.counter);
+  }
 }
