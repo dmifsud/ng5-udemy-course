@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   name = '';
+  tempRouting = 'recipes';
+  redirectTo(ref) {
+    this.tempRouting = ref;
+  }
 }
