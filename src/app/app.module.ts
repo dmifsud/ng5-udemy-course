@@ -16,6 +16,7 @@ import { UnlessDirective } from './unless.directive';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { RecipeService } from './shared/services/recipe.service';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
+import { IsShowingDirective } from './shared/directives/is-showing.directive';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
     ShoppingEditComponent,
     BetterHighlightDirective,
     UnlessDirective,
-    DropdownDirective
+    DropdownDirective,
+    IsShowingDirective
   ],
   imports: [
     BrowserModule,

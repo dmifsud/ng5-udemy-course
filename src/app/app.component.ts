@@ -11,4 +11,7 @@ export class AppComponent {
   redirectTo(ref) {
     this.tempRouting = ref;
   }
+  isElementShowing($event: boolean) {
+    console.log('is element showing', $event);
+  }
 }
