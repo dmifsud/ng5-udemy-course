@@ -17,6 +17,7 @@ import { DropdownDirective } from './shared/dropdown.directive';
 import { RecipeService } from './shared/services/recipe.service';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
 import { IsShowingDirective } from './shared/directives/is-showing.directive';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { IsShowingDirective } from './shared/directives/is-showing.directive';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [RecipeService, ShoppingListService],
   bootstrap: [AppComponent]
