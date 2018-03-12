@@ -21,4 +21,8 @@ export class RecipeService {
     getRecipes() {
         return [...this.recipes];
     }
+
+    getRecipe(id: string) {
+        return this.recipes.filter(recipe => recipe.id === id)[0];
+    }
 }

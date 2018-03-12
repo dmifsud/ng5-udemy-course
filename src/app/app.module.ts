@@ -18,6 +18,8 @@ import { RecipeService } from './shared/services/recipe.service';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
 import { IsShowingDirective } from './shared/directives/is-showing.directive';
 import { AppRoutingModule } from './app-routing.module';
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './recipes/recipe-list/recipe-edit/recipe-edit.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { AppRoutingModule } from './app-routing.module';
     BetterHighlightDirective,
     UnlessDirective,
     DropdownDirective,
-    IsShowingDirective
+    IsShowingDirective,
+    RecipeStartComponent,
+    RecipeEditComponent
   ],
   imports: [
     BrowserModule,
