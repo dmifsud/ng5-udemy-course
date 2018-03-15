@@ -1,0 +1,44 @@
+<h2>Forms assignment</h2>
+<form (ngSubmit)='onSubmit()' #f='ngForm'>
+  <div class="row">
+    <div class="col-md-12 form-group">
+      <input type="email" #email='ngModel' email id='mail' ngModel name='mail' placeholder='Email' class='form-control' required>
+    </div>
+    <div class="col-md-12" *ngIf='!email.valid && email.touched'>
+        <div class="alert alert-danger">
+          <div *ngIf='email.errors.required'>* Email is required</div>
+          <div *ngIf='email.errors.email'>* Email is invalid</div>
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 form-group">
+      <select id='subscription' name='subscription' ngModel class='form-control' #subscription='ngModel' required>
+        <option value='' disabled>Subscription</option>
+        <option value="basic">Basic</option>
+        <option value="advanced">Advanced</option>
+        <option value="pro">Pro</option>
+      </select>
+    </div>
+    <div class="col-md-12" *ngIf='!subscription.valid && subscription.touched'>
+        <div class="alert alert-danger">
+          <div *ngIf='subscription.errors.required'>* Subscription is required</div>
+        </div>
+    </div>
+  </div>
+  <div class="row form-group">
+    <div class="col-md-12 form-group">
+      <input type="password" id='password' #password='ngModel' ngModel name='password' placeholder='Password' class='form-control' required>
+    </div>
+    <div class="col-md-12" *ngIf='!password.valid && password.touched'>
+        <div class="alert alert-danger">
+          <div *ngIf='password.errors.required'>* Password is required</div>
+        </div>
+    </div>
+  </div>
+  <div class="row form-group">
+    <div class="col-md-12">
+      <button type='submit' class='btn btn-primary' [disabled]='!f.valid'>Submit</button>
+    </div>
+  </div>
+</form>

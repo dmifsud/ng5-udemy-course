@@ -20,6 +20,7 @@ import { IsShowingDirective } from './shared/directives/is-showing.directive';
 import { AppRoutingModule } from './app-routing.module';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipes/recipe-list/recipe-edit/recipe-edit.component';
+import { FormsAssignmentComponent } from './forms-assignment/forms-assignment.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { RecipeEditComponent } from './recipes/recipe-list/recipe-edit/recipe-ed
     DropdownDirective,
     IsShowingDirective,
     RecipeStartComponent,
-    RecipeEditComponent
+    RecipeEditComponent,
+    FormsAssignmentComponent
   ],
   imports: [
     BrowserModule,
