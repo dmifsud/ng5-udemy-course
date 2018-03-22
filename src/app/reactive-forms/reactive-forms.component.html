@@ -1,0 +1,36 @@
+<form [formGroup]='signUpForm' (ngSubmit)='onSubmit()'>
+  <div formGroupName='userGroup'>
+      <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id='username' 
+                formControlName='username'
+                class="form-control">
+          {{signUpForm.get('userGroup.username').errors | json}}
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id='email' 
+                  formControlName='email'
+                  class="form-control">
+            <div *ngIf='!signUpForm.get("userGroup.email").valid'>Invalid email</div>
+            {{signUpForm.get('userGroup.email').errors | json}}
+        </div>
+  </div>
+  <div class="radio" *ngFor='let gender of genders'>
+    <label>
+      <input type="radio" formControlName='gender' [value]='gender'> {{gender}}
+    </label>
+  </div>
+
+  <div formArrayName='hobbies'>
+    <label>Hobbies</label>
+    <button class="btn btn-default btn-xs" type='button' (click)='onAddHobby()'>Add Hobby</button>
+    <div class="form-group" *ngFor='let hobbyControl of signUpForm.get("hobbies").controls; let i = index'>
+      <input type="text" class="form-control" [formControlName]='i'>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <button class="btn btn-primary" type='submit'>Submit</button>
+  </div>
+</form>
